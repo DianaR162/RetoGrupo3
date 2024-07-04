@@ -1,5 +1,8 @@
 :root {
-    --name-var: 'value';
+    --color-light-grey: #ededed;
+    --color-blue: #000066;
+    --color-grey-text: #afafaf;
+    --color-white: #ffffff;
 }
 
 * {

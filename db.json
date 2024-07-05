@@ -1,0 +1,169 @@
+{
+  "basePreguntas": [
+    {
+      "id": 0,
+      "seccion": "Por qué",
+      "pregunta": "¿Crees que tu empresa está cambiando positivamente la vida de las personas?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 1,
+      "seccion": "Por qué",
+      "pregunta": "¿Qué tan claro es el propósito de la empresa?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 2,
+      "seccion": "Por qué",
+      "pregunta": "¿Sus empleados comprenden y comparten la misión y el propósito de la empresa?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 3,
+      "seccion": "Por qué",
+      "pregunta": "¿Su empresa toma sus decisiones basadas en la misión y valores de la empresa?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 4,
+      "seccion": "Por qué",
+      "pregunta": "¿Qué tanto ayuda el propósito de la empresa a diferenciarse de la competencia?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 5,
+      "seccion": "Cómo",
+      "pregunta": "¿Tienes procesos establecidos para garantizar la calidad de tus productos o servicios?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 6,
+      "seccion": "Cómo",
+      "pregunta": "¿Qué tan capacitados están los empleados para desarrollar sus actividades dentro de la empresa?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 7,
+      "seccion": "Cómo",
+      "pregunta": "¿Tu empresa ofrece algo único que la diferencia de la competencia?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 8,
+      "seccion": "Cómo",
+      "pregunta": "¿Qué tan capacitados están los empleados para desarrollar sus actividades dentro de la empresa?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 9,
+      "seccion": "Cómo",
+      "pregunta": "¿Qué tanto se revisan o mejoran los procesos internos de la empresa?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 10,
+      "seccion": "Qué",
+      "pregunta": "¿Tu empresa ha identificado claramente a su público objetivo?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 11,
+      "seccion": "Qué",
+      "pregunta": "¿Qué tanto responden los productos o servicios de la empresa a las necesidades del cliente?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 12,
+      "seccion": "Qué",
+      "pregunta": "¿Qué tan innovadores son tus productos respecto al mercado?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 13,
+      "seccion": "Qué",
+      "pregunta": "¿Qué tan frecuente la empresa realiza encuestas para medir la satisfacción del cliente?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    },
+    {
+      "id": 14,
+      "seccion": "Qué",
+      "pregunta": "¿Su empresa tiene canales efectivos para distribuir sus productos o servicios?",
+      "opciones": {
+        "opcion1": "Poco",
+        "opcion2": "Neutral",
+        "opcion3": "Moderadamente",
+        "opcion4": "Completamente"
+      }
+    }
+  ]
+}

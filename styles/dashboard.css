@@ -1,0 +1,44 @@
+body {
+    background-color: var(--color-light-grey);
+}
+
+#nav-dashboard .nav-link.show {
+    color: var(--color-white);
+}
+
+.navbar-toggler-icon {
+    color: var(--color-blue);
+}
+
+.bi.bi-person-circle {
+    font-size: 40px;
+    color: var(--color-grey-text);
+}
+
+.offcanvas.offcanvas-start {
+    background-color: var(--color-blue);
+}
+
+.btn-close {
+    background-color: var(--color-grey-text);
+    border-radius: 20px;
+}
+
+.nav-link,
+.nav-link.dropdown-toggle {
+    color: var(--color-grey-text);
+    font-size: 18px;
+}
+
+.bi-speedometer2,
+.bi-ui-checks {
+    margin-right: 12px;
+}
+
+.bi-bullseye,
+.bi-arrow-left-circle {
+    margin-right: 16px;
+}
+
+.line {
+}

@@ -1,0 +1,19 @@
+.navbar-height {
+    height: 88px;
+}
+
+.navbar-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (min-width: 576px) {
+    .navbar-height {
+        height: 150px;
+    }
+
+    .navbar-text {
+        font-size: 50px;
+    }
+}

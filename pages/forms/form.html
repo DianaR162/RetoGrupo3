@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Formularios</title>
-        <!-- Esto es para enlazar la librería en este caso es bootstrap -->
+        <title>Cuestionario</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet"
+        />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -12,144 +15,67 @@
             crossorigin="anonymous"
         />
         <!-- Esto es para llamar a CSS -->
+        <link rel="stylesheet" href="navbar.css" />
         <link rel="stylesheet" href="form.css" />
+        <link rel="stylesheet" href="../../styles/global.css" />
     </head>
     <body>
         <section class="header">
-            <nav
-                class="navbar navbar-expand-lg navbar-light bg-light border-body w-100 custom-navbar"
-            >
+            <nav>
                 <div
-                    class="container-fluid"
-                    style="
-                        background-color: #006b80;
-                        height: 100px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    "
+                    class="d-flex justify-content-center align-items-center bg-primary navbar-height"
                 >
-                    <span class="navbar-text" style="color: white">
-                        Estramipyme
-                    </span>
+                    <span class="navbar-text"> Estramipyme </span>
                 </div>
             </nav>
         </section>
-
-        <section id="welcome" class="py-5">
-            <div class="container">
-                <div class="Bienvenido text-center">
-                    <h4>¡Bienvenido!</h4>
-                    <p>
-                        Agradecemos su tiempo y disposición para participar en
-                        este formulario. Sus respuestas son esenciales para que
-                        podamos obtener un diagnóstico preciso y completo. Esto
-                        nos permitirá identificar áreas de mejora para una buena
-                        toma de decisiones.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <img
-            src="../../assets/images/form/logohome.jpeg"
-            class="imagen-ajustada"
-            alt=""
-        />
-        <br />
-        <br /><a href="#">Iniciar</a><br />
-        <br />
-
-        <section class="header">
-            <nav
-                class="navbar navbar-expand-lg navbar-light bg-light border-body w-100 custom-navbar"
-            >
-                <div
-                    class="container-fluid"
-                    style="
-                        background-color: #006b80;
-                        height: 100px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    "
-                >
-                    <span class="navbar-text" style="color: white">
-                        Estramipyme
-                    </span>
-                </div>
-            </nav>
-        </section>
-
-        <!-- Circulo Dorado -->
-        <br />
-        <h3>Círculo Dorado</h3>
-        <br />
-        <h4>¿Por qué?</h4>
-        <section class="container1">
-            <p>
+        <section class="container">
+            <p class="text-center my-5 question-text">
                 ¿Crees que tu empresa está cambiando positivamente la vida de
                 las personas?
             </p>
-            <div class="range">
-                <div class="sliderValue">
-                    <span class="value-display">4</span>
-                </div>
-                <div class="field">
+            <div class="text-center">
+                <span id="sliderLabel">4</span>
+                <div>
                     <input
+                        id="slider"
                         type="range"
                         min="1"
                         max="4"
                         value="4"
                         step="1"
-                        class="slider"
+                        oninput="updateLabel()"
+                        class="w-100"
                     />
                 </div>
             </div>
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item" style="border: none">
-                    <input
-                        class="form-check-input me-1"
-                        type="radio"
-                        name="opinion"
-                        style="background: #006b80"
-                    />
-                    <label>Poco</label>
-
-                    <input
-                        class="form-check-input me-1"
-                        type="radio"
-                        name="opinion"
-                        style="background: #006b80"
-                    />
-                    <label>Neutral</label>
-
-                    <input
-                        class="form-check-input me-1"
-                        type="radio"
-                        name="opinion"
-                        style="background: #006b80"
-                    />
-                    <label>Moderadamente</label>
-
-                    <input
-                        class="form-check-input me-1"
-                        type="radio"
-                        name="opinion"
-                        style="background: #006b80"
-                    />
-                    <label>Completamente</label>
-                </li>
-            </ul>
-
-            <div class="container2">
+            <div
+                class="row mt-3 px-4 px-sm-0 d-flex justify-content-center text-md-center"
+            >
+                <div class="col-6 col-md-2">
+                    <span class="badge bg-primary rounded-pill">1</span>
+                    <span class="option-text">Poco</span>
+                </div>
+                <div class="col-6 col-md-2">
+                    <span class="badge bg-primary rounded-pill">2</span>
+                    <span class="option-text">Neutral</span>
+                </div>
+                <div class="col-6 col-md-3">
+                    <span class="badge bg-primary rounded-pill">3</span>
+                    <span class="option-text">Moderadamente</span>
+                </div>
+                <div class="col-6 col-md-3">
+                    <span class="badge bg-primary rounded-pill">4</span>
+                    <span class="option-text">Completamente</span>
+                </div>
+            </div>
+            <div class="mt-5 justify-content-end d-flex">
                 <button
-                    class="btn btn-success"
+                    class="btn btn-primary option-text"
                     data-toggle="modal"
                     data-target="#ventanaModal"
-                    style="background: #006b80"
                 >
-                    Enviar
+                    Siguiente
                 </button>
             </div>
 
@@ -192,10 +118,9 @@
                         </div>
                         <div class="modal-footer">
                             <button
-                                class="btn btn-success"
+                                class="btn btn-primary"
                                 type="button"
                                 data-dismiss="modal"
-                                style="background: #006b80"
                                 onclick="redirectToPage()"
                             >
                                 Siguiente
@@ -206,56 +131,32 @@
             </div>
         </section>
 
-        <script>
-            const sliders = document.querySelectorAll('.slider');
-            const valueDisplays = document.querySelectorAll('.value-display');
-
-            sliders.forEach((slider, index) => {
-                slider.addEventListener('input', () => {
-                    valueDisplays[index].textContent = slider.value;
-                });
-            });
-
-            function redirectToPage() {
-                window.location.href =
-                    'file:///C:/Users/anaid/OneDrive/Documents/Proyecto%20Estramypyme/form/index.html';
-            }
-        </script>
-
         <!-- Reloj estratégico -->
-        <section class="header">
-            <nav
-                class="navbar navbar-expand-lg navbar-light bg-light border-body w-100 custom-navbar"
-            >
-                <div
-                    class="container-fluid"
-                    style="
-                        background-color: #006b80;
-                        height: 100px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    "
+        <hr />
+        <div class="container">
+            <h4 class="text-center">Para calidad y precio</h4>
+            <div class="mt-5 justify-content-between d-flex">
+                <button
+                    class="btn btn-primary option-text"
+                    data-toggle="modal"
+                    data-target="#ventanaModal"
                 >
-                    <span class="navbar-text" style="color: white">
-                        Estramipyme
-                    </span>
-                </div>
-            </nav>
-        </section>
-        <br />
-        <h3>Reloj Estratégico</h3>
-        <br />
-        <h4>Para calidad y precio</h4>
-
-        <a
-            href="file:///C:/Users/anaid/OneDrive/Documents/Proyecto%20Estramypyme/form/index.html"
-            >Atrás</a
-        >
-
-        <!-- Nuevamente Bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                    Anterior
+                </button>
+                <button
+                    class="btn btn-primary option-text"
+                    data-toggle="modal"
+                    data-target="#ventanaModal"
+                >
+                    Siguiente
+                </button>
+            </div>
+        </div>
+        <script src="form.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>

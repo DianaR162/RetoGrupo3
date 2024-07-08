@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.header, .footer {
+    background-color: #6e6e6e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header img, .footer img {
+    max-height: 50px;
+    vertical-align: middle;
+}
+
+.header nav, .footer nav {
+    display: inline-block;
+}
+
+.header a, .footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.header a:hover, .footer a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.container-fluid {
+    padding: 0;
+}   
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.section h1, .section h2, .section h3 {
+    color: #333;
+    text-align: center;
+}
+
+.section p {
+    color: hsl(0, 100%, 2%);
+    text-align: center;
+}
+.section .buttons {
+    text-align: center;
+    margin-top: 20px;
+}    
+.section .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006B80;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.section .buttons a:hover {
+    background-color: #006B80;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.section form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}     
+.section form label {
+    display: block;
+    margin: 10px 0 5px;
+    width: 100%;
+}
+
+.section form input[type="email"],
+.section form input[type="text"],
+.section form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.section form button {
+    padding: 10px 20px;
+    background-color: #006B80;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.section form button:hover {
+    background-color: #006B80;
+}    
+.videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}    
+.videos .video {
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.videos .video h3 {
+    color: #333;
+    text-align: center;
+}
+
+.videos .video p {
+    color: #c7c5c5;
+    text-align: center;
+}
+
+.videos .video img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.bg-primary {
+    background-color: #006B80
+}
+
+.text-white {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .videos .video {
+        width: 30%;
+    }    
+    .header nav, .footer nav {
+        display: block;
+        text-align: center;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .videos .video {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+    .social-media {
+        padding: 20px 0;
+        background-color: #6e6e6e;
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s;
+    }
+    
+    .social-icon:hover {
+        transform: scale(1.1);
+    }
+}

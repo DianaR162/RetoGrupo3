@@ -3,6 +3,11 @@
     --color-blue: #000066;
     --color-grey-text: #afafaf;
     --color-white: #ffffff;
+    --color-black: #000000;
+    --color-yellow-ligth: #ffe694;
+    --color-yellow-semidark: #ffc33e;
+    --color-yellow-dark: #ffa119;
+    --color-grey-dark: #494949;
 }
 
 * {

@@ -18,7 +18,6 @@
 
 body {
     font-family: 'Open Sans';
-    font-size: 25px;
 }
 
 .btn-primary {
@@ -43,4 +42,8 @@ body {
     --bs-btn-color: #000000;
     --bs-btn-hover-color: #006b80;
     --bs-btn-active-color: #088faa;
+}
+
+.bg-primary {
+    background-color: #006b80 !important;
 }

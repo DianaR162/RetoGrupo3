@@ -1,5 +1,7 @@
 :root {
+    --color-black-80: rgba(0, 0, 0, 0.8);
     --color-light-grey: #ededed;
+    --color-blue-light: #006b80;
     --color-blue: #000066;
     --color-grey-text: #afafaf;
     --color-white: #ffffff;
@@ -35,6 +37,26 @@ body {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #006b80;
     --bs-btn-disabled-border-color: #006b80;
+    border-radius: var(--bs-border-radius-pill);
+}
+
+.btn-blue {
+    --bs-btn-color: var(--color-white);
+    --bs-btn-bg: var(--color-blue);
+    --bs-btn-border-color: var(--color-blue);
+    --bs-btn-hover-color: var(--color-white);
+    --bs-btn-hover-bg: var(--color-blue);
+    --bs-btn-hover-border-color: var(--color-blue);
+    border-radius: var(--bs-border-radius-pill);
+}
+
+.btn-light {
+    --bs-btn-color: var(--color-blue);
+    --bs-btn-bg: var(--color-white);
+    --bs-btn-border-color: var(--color-grey-text);
+    --bs-btn-hover-color: var(--color-blue);
+    --bs-btn-hover-bg: var(--color-white);
+    --bs-btn-hover-border-color: var(--color-grey-text);
     border-radius: var(--bs-border-radius-pill);
 }
 

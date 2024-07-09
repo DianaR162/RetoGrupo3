@@ -1,62 +1,27 @@
-![Logo Nodo EAFIT](https://es.nodoeafit.com/wp-content/uploads/2023/11/logo-nodo-azul.svg)
+# Estramipymes
 
-# Reto 1 Nodo
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
 
-Descripción
+## Development server
 
-## Integrantes
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
--   Name Name Name
+## Code scaffolding
 
-## Tecnologías usadas
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
--   HTML5
--   CSS
--   JavaScript
+## Build
 
-## Librerías usadas
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
--   Boostrap v5
--   ChartJS
--   Axios
+## Running unit tests
 
-## Escructura del proyecto
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### .vscode
+## Running end-to-end tests
 
-Dentro de esta carpeta se encuentran archivos de configuración hacia el IDE VScode.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-### assets
+## Further help
 
-Dentro de esta carpeta se encuentran archivos tales como immágenes, videos, íconos, ducumentos, entre otros.
-
-### pages
-
-Dentro de esta carpeta se encuentran subcarpetas las cuales tendrían como nombre la página correspondiente y la siguiente estructura de archivos:
-
-```
-|__name-folder
-  |__nameFolter.html
-  |__nameFolter.js
-  |__nameFolter.css
-```
-
-### services
-
-Dentro de esta carpeta se encuentran subcarpetas las cuales tendrían como nombre al servicio, API o Backend correspondiente anidándole la palabra "api" y la siguiente estructura de archivos:
-
-```
-|__name-folder-api
-  |__controllerExample.js
-  |__controller2Example.js
-  |__ ...
-  |__nameFolderInstance.js
-```
-
-### styles
-
-Dentro de esta carpeta se encuentran archivos de configuración css como por ejemplo global.css el cual contiene estilos globales para todo el proyecto.
-
-### .gitignore
-
-### .prettierrc.json
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

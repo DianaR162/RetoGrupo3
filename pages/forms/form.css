@@ -1,4 +1,4 @@
-#slider {
+.slider {
     accent-color: #006b80;
 }
 
@@ -28,7 +28,6 @@
     width: auto;
 }
 
-/* Estilos responsivos */
 @media (min-width: 576px) {
     .question-text,
     #section-send-success p {

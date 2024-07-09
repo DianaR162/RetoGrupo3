@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+.imagen-ajustada {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: -70px auto;
+}
+
+.navbar-text {
+    font-size: x-large;
+}
+
+#welcome {
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+    background: white;
+}
+
+h4 {
+    text-align: center;
+}
+
+.Bienvenido p {
+    text-align: center;
+}
+
+a {
+    display: block;
+    width: fit-content;
+    font-family: sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 10px 50px;
+    background: #006b80;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: transparent;
+    border: 2px solid #006b80;
+    color: #006b80;
+}
+
+/* Estilos del formulario Círculo Dorado */
+h3 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.list-group {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    flex-wrap: wrap;
+}
+
+.container1 {
+    width: 90%;
+    max-width: 360px;
+    height: auto;
+    background: white;
+    border: 5px solid #006b80;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.container1 p {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: x-large;
+    padding: 30px;
+}
+
+.range {
+    margin: 20px auto;
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.range .sliderValue {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.range .sliderValue span {
+    background: none;
+    color: #006b80;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.range .field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.range .field input {
+    width: 100%;
+    background: #006b80;
+    border-radius: 5px;
+}
+
+.range .field input::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* Botón de cerrar personalizado */
+.custom-close {
+    color: #006b80;
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.button-container2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h5 {
+    text-align: center;
+}
+
+/* Estilos responsivos */
+@media (min-width: 576px) {
+    .container {
+        padding: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container1 {
+        width: 70%;
+        max-width: 600px;
+    }
+
+    .range .sliderValue span {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .container1 {
+        width: 50%;
+        max-width: 750px;
+    }
+
+    .range {
+        margin: 50px auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container1 {
+        width: 40%;
+        max-width: 1000px;
+    }
+}

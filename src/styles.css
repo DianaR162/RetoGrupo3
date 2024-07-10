@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-black-80: rgba(0, 0, 0, 0.8);
+    --color-light-grey: #ededed;
+    --color-blue-light: #006b80;
+    --color-blue: #000066;
+    --color-grey-text: #afafaf;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-yellow-ligth: #ffe694;
+    --color-yellow-semidark: #ffc33e;
+    --color-yellow-dark: #ffa119;
+    --color-grey-dark: #494949;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #006b80;
+    --bs-btn-border-color: #006b80;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #01859f;
+    --bs-btn-hover-border-color: #088faa;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #088faa;
+    --bs-btn-active-border-color: #088faa;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #006b80;
+    --bs-btn-disabled-border-color: #006b80;
+    border-radius: var(--bs-border-radius-pill);
+}
+
+.btn-blue {
+    --bs-btn-color: var(--color-white);
+    --bs-btn-bg: var(--color-blue);
+    --bs-btn-border-color: var(--color-blue);
+    --bs-btn-hover-color: var(--color-white);
+    --bs-btn-hover-bg: var(--color-blue);
+    --bs-btn-hover-border-color: var(--color-blue);
+    border-radius: var(--bs-border-radius-pill);
+}
+
+.btn-light {
+    --bs-btn-color: var(--color-blue);
+    --bs-btn-bg: var(--color-white);
+    --bs-btn-border-color: var(--color-grey-text);
+    --bs-btn-hover-color: var(--color-blue);
+    --bs-btn-hover-bg: var(--color-white);
+    --bs-btn-hover-border-color: var(--color-grey-text);
+    border-radius: var(--bs-border-radius-pill);
+}
+
+.btn-link {
+    --bs-btn-color: #000000;
+    --bs-btn-hover-color: #006b80;
+    --bs-btn-active-color: #088faa;
+}
+
+.bg-primary {
+    background-color: #006b80 !important;
+}

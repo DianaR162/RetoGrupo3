@@ -1,0 +1,145 @@
+<header class="container-fluid">
+  <nav class="row shadow">
+    <div class="col-4 d-flex align-items-center">
+      <img src="./assets/icons/estramipyme-blue.svg" alt="estramipyme" class="estramipyme-logo" />
+    </div>
+    <div class="col-8 d-flex justify-content-center justify-content-sm-end align-items-center gap-1 gap-sm-3">
+      <a routerLink="log-in" class="btn btn-blue">Acceder</a>
+      <a routerLink="register" class="btn btn-light">Registrarse</a>
+    </div>
+  </nav>
+</header>
+<main class="container-fluid">
+  <section id="section-estramipyme" class="row">
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center order-md-1">
+      <img src="./assets/images/landing-page/section-estramipyme.svg" alt="estramipyme" />
+    </div>
+    <div class="col-12 col-md-6 mt-5 d-flex flex-wrap justify-content-center">
+      <h3 class="text-center text-md-start">ESTRAMIPYME</h3>
+      <p class="mt-5 text-section">
+        Celebramos los logros y la creatividad de las pequeñas y medianas empresas, nuestro mayor propósito es examinar
+        los desafíos y obstáculos que enfrentan en su día a día. Desde la competencia desigual hasta las limitaciones
+        financieras, queremos que seas parte de nuestra comunidad como una herramienta fundamental de tu empresa.
+      </p>
+      <a routerLink="register" class="btn btn-blue mt-3 mt-lg-5">Registrarse</a>
+    </div>
+  </section>
+  <section id="section-about-us" class="row section-blue-light">
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <img src="./assets/images/landing-page/section-about-us.svg" alt="Quiénes somos" />
+    </div>
+    <div class="col-12 col-md-6 mt-5">
+      <h3 class="text-center">¿Quiénes somos?</h3>
+      <p class="mt-5 text-section">
+        Somos una metodología creada en 2019 con el propósito fundamental de fortalecer el tejido empresarial
+        colombiano. Ofrecemos una visión completa y empática a las empresas, haciendo un llamado a la acción para apoyar
+        en los factores clave de la economía.
+      </p>
+      <p class="text-section">
+        Nuestra metodología se desarrolló en respuesta a la necesidad de organizaciones sin ánimo de lucro que
+        solicitaban consultoría en temas de estrategia. Impulsamos a los comerciantes a afrontar desafíos similares a
+        los de las grandes corporaciones y a superar dificultades financieras. Con este enfoque, buscamos equipar a las
+        PYMES y organizaciones sin ánimo de lucro con las herramientas necesarias para prosperar en un mercado
+        competitivo.
+      </p>
+    </div>
+  </section>
+  <section id="section-our-methodology" class="row">
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center order-md-1">
+      <img src="./assets/images/landing-page/section-our-methodology.svg" alt="Nuestra metodología" />
+    </div>
+    <div class="col-12 col-md-6 mt-5">
+      <h3 class="text-center">Nuestra metodología</h3>
+      <p class="mt-5 text-section">
+        Nuestra metodología se basa en realizar un diagnóstico bajo un contexto social y económico, abordando los
+        siguientes aspectos clave: <br />
+        Estrategias de Marketing, gestión Financiera, innovación, gestión del Talento humano. Con este enfoque integral,
+        proporcionamos una visión completa de los elementos que contribuyen al éxito de las empresas. Esto nos permite
+        entender situaciones específicas y desarrollar diferentes estrategias que se puedan aplicar en diversos
+        contextos.
+      </p>
+    </div>
+  </section>
+  <section id="section-learn-platform" class="row section-blue-light">
+    <div class="col-12">
+      <h3 class="text-center">Aprende sobre nuestra plataforma</h3>
+    </div>
+    <div class="col-12 d-flex justify-content-center flex-wrap gap-5 mt-5">
+      <div class="container-video">
+        <video controls>
+          <source src="https://www.youtube.com/watch?v=K87aFjB7Ff0" type="video/mp4" />
+        </video>
+        <h5>Título</h5>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque velit saepe modi expedita provident corporis
+          adipisci perferendis earum quia pariatur?
+        </p>
+      </div>
+      <div class="container-video mx-lg-5">
+        <video controls>
+          <source src="https://www.youtube.com/watch?v=K87aFjB7Ff0" type="video/mp4" />
+        </video>
+        <h5>Título</h5>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque velit saepe modi expedita provident corporis
+          adipisci perferendis earum quia pariatur?
+        </p>
+      </div>
+      <div class="container-video">
+        <video controls>
+          <source src="https://www.youtube.com/watch?v=K87aFjB7Ff0" type="video/mp4" />
+        </video>
+        <h5>Título</h5>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque velit saepe modi expedita provident corporis
+          adipisci perferendis earum quia pariatur?
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="section-contact-us" class="row">
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center order-md-1">
+      <img src="./assets/images/landing-page/section-contact-us.svg" alt="Contáctanos" />
+    </div>
+    <div class="col-12 col-md-6 mt-5">
+      <form action="#" class="d-flex flex-wrap row-gap-4 justify-content-center">
+        <h3 class="text-center">Contáctanos</h3>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Correo" required min="4" />
+        <input type="text" id="title" name="title" class="form-control" placeholder="Asunto" required />
+        <textarea name="message" id="message" class="form-control" placeholder="Mensaje" required></textarea>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="container-fluid d-flex justify-content-center flex-wrap py-5">
+  <img src="./assets/icons/estramipyme.svg" alt="estramipyme" class="w-50 img" />
+  <img src="./assets/icons/nodo-eafit.svg" alt="Nodo Universidad EAFIT" class="my-4 w-75 img ms-md-4" />
+  <div class="col-12 col-md-4 col-xl-2 pt-md-5">
+    <ul class="d-flex flex-wrap flex-column row-gap-3">
+      <li><a href="#!">Preguntas</a></li>
+      <li><a href="#!">Políticas</a></li>
+    </ul>
+  </div>
+  <div class="col-12 col-md-6 col-xl-3 my-4 pt-md-3">
+    <ul class="d-flex flex-wrap flex-column row-gap-3">
+      <li>
+        <a href="mailto:stramipyme&#64;gmail.com" target="_blank"><i
+            class="bi bi-envelope-fill pe-3"></i>stramipyme&#64;gmail.com</a>
+      </li>
+      <li>
+        <a href="tel:+573000000000" target="_blank"><i class="bi bi-telephone-fill pe-3"></i>+57 3000000000</a>
+      </li>
+      <li>
+        <a href="https://www.google.com/maps/search/?api=1&query=Cra+20+%23+30+a+-+50,+Medell%C3%ADn" target="_blank"><i
+            class="bi bi-geo-alt-fill pe-3"></i>Cra 20 # 30 a - 50, Medellín</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-10 col-md-6 col-xl-2 d-flex column-gap-3 pt-md-5">
+    <a href="#!"><i class="bi bi-facebook"></i></a>
+    <a href="#!"><i class="bi bi-twitter-x"></i></a>
+    <a href="#!"><i class="bi bi-instagram"></i></a>
+  </div>
+</footer>

@@ -3,6 +3,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
 import { GeneralComponent } from './dashboard/general/general.component';
+import { DiagnosisComponent } from './dashboard/diagnosis/diagnosis.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },
@@ -11,6 +12,9 @@ export const routes: Routes = [
     { path: 'dashboard', children: [
         {
             path: 'general', component: GeneralComponent
-        }
+        },
+        {
+          path: 'diagnosis', component: DiagnosisComponent
+      }
     ] }
 ];

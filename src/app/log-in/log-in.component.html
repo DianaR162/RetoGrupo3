@@ -1,1 +1,33 @@
-<p>log-in works!</p>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="row">
+    <div class="col-md-5 d-none d-md-flex align-items-center">
+      <img src="./assets/images/login.png" alt="login" class="z-1 h-75" />
+    </div>
+    <div class="col-md-6">
+      <form class="card p-5 h-100">
+        <h2 class="text-center mb-4">Acceder</h2>
+        <div class="mb-3">
+          <input name="email" type="email" class="form-control" placeholder="Correo electrónico" />
+        </div>
+        <div class="mb-3">
+          <input name="password" type="password" class="form-control" placeholder="Contraseña" />
+        </div>
+        <div class="text-center">
+          <a routerLink="/dashboard/general" class="btn btn-primary w-100">
+            Ingresar
+          </a>
+        </div>
+        <div class="text-center mt-3">
+          <a href="#" class="btn btn-link">
+            ¿Olvidaste tu contraseña?
+          </a>
+        </div>
+        <div class="text-center mt-2">
+          <a routerLink="/register" class="btn btn-link">
+            Registrarme
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div *ngIf="isShow" class="modal-background" (click)="closeModal()">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <div class="modal-h">
+      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"><i
+          class="bi bi-x-circle-fill"></i></button>
+      <h5 class="modal-title mt-3">{{title}}</h5>
+    </div>
+    <div class="modal-b">
+      {{text}}
+    </div>
+    <div class="modal-f">
+      <button (click)="handleClick()" class="btn btn-blue mb-3">{{textButton}}</button>
+    </div>
+  </div>
+</div>

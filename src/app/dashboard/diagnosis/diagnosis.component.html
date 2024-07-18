@@ -58,7 +58,7 @@
     </nav>
   </header>
 
-  <div class="container d-flex flex-wrap row-gap-4">
+  <div class="container d-flex flex-wrap row-gap-4" *ngIf="answersForm.radar">
     <div class="row contain-graph">
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <div class="container-gold-circle">
@@ -161,3 +161,5 @@
     </div>
   </div>
 </div>
+
+<app-modal-dashboard></app-modal-dashboard>

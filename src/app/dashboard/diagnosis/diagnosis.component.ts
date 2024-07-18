@@ -6,11 +6,13 @@ import {
   TEXTS_GOLDEN_CIRCLE,
   TEXTS_RADAR,
 } from '../../../utils/constants';
+import { ModalDashboardComponent } from '../../components/organisms/modal-dashboard/modal-dashboard.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-diagnosis',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ModalDashboardComponent, NgIf],
   templateUrl: './diagnosis.component.html',
   styleUrls: ['../dashboard.component.css', './diagnosis.component.css'],
 })
@@ -143,12 +145,12 @@ export class DiagnosisComponent {
     };
 
     const weights: any = {
-      diferenciacion: [0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0],
-      diferenciacionSegmentada: [1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0],
-      estrategiasDestinadaFracaso: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      bajoPrecioValorAnadido: [0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0],
-      bajoPrecio: [1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1],
-      hibrida: [2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+      diferenciacion: [3, 2, 3, 3, 3, 3, 1, 2, 3, 3, 1, 3],
+      diferenciacionSegmentada: [2, 3, 2, 2, 3, 3, 1, 2, 3, 3, 1, 3],
+      estrategiasDestinadaFracaso: [3, 3, 3, 3, 1, 2, 2, 2, 1, 2, 0, 1],
+      bajoPrecioValorAnadido: [3, 2, 2, 1, 2, 2, 2, 2, 1, 0, 3, 2],
+      bajoPrecio: [1, 2, 1, 1, 1, 2, 3, 3, 1, 2, 3, 1],
+      hibrida: [2, 3, 3, 3, 2, 3, 2, 1, 2, 2, 3, 3],
     };
 
     for (let category in categories) {
@@ -190,53 +192,55 @@ export class DiagnosisComponent {
   }
 
   ngAfterViewInit(): void {
-    const COLOR_BLUE = '#000066';
-    const dataRadar = this.dataRadarGraph;
+    if (this.containerChart?.nativeElement) {
+      const COLOR_BLUE = '#000066';
+      const dataRadar = this.dataRadarGraph;
 
-    const data = {
-      labels: [
-        'Conocimiento del cliente',
-        ['Conocimiento', 'del negocio'],
-        ['Coherencia del', 'modelo de negocio'],
-        ['Alineación en', 'la comunicación', 'interna'],
-        'Salud financiera',
-      ],
-      datasets: [
-        {
-          label: 'Radar estratégico',
-          data: [
-            dataRadar.conocimientoCliente.value,
-            dataRadar.conocimientoNegocio.value,
-            dataRadar.coherenciaModeloNegocio.value,
-            dataRadar.alineacionComunicacionInterna.value,
-            dataRadar.saludFinanciera.value,
-          ],
-          fill: false,
-          borderColor: COLOR_BLUE,
-          pointBackgroundColor: COLOR_BLUE,
-          pointBorderColor: COLOR_BLUE,
-          pointHoverBackgroundColor: COLOR_BLUE,
-          pointHoverBorderColor: COLOR_BLUE,
-        },
-      ],
-    };
+      const data = {
+        labels: [
+          'Conocimiento del cliente',
+          ['Conocimiento', 'del negocio'],
+          ['Coherencia del', 'modelo de negocio'],
+          ['Alineación en', 'la comunicación', 'interna'],
+          'Salud financiera',
+        ],
+        datasets: [
+          {
+            label: 'Radar estratégico',
+            data: [
+              dataRadar.conocimientoCliente.value,
+              dataRadar.conocimientoNegocio.value,
+              dataRadar.coherenciaModeloNegocio.value,
+              dataRadar.alineacionComunicacionInterna.value,
+              dataRadar.saludFinanciera.value,
+            ],
+            fill: false,
+            borderColor: COLOR_BLUE,
+            pointBackgroundColor: COLOR_BLUE,
+            pointBorderColor: COLOR_BLUE,
+            pointHoverBackgroundColor: COLOR_BLUE,
+            pointHoverBorderColor: COLOR_BLUE,
+          },
+        ],
+      };
 
-    new Chart(this.containerChart.nativeElement, {
-      type: 'radar',
-      data: data,
-      options: {
-        elements: {
-          line: {
-            borderWidth: 2,
+      new Chart(this.containerChart.nativeElement, {
+        type: 'radar',
+        data: data,
+        options: {
+          elements: {
+            line: {
+              borderWidth: 2,
+            },
+          },
+          scales: {
+            r: {
+              min: 0,
+              max: 4,
+            },
           },
         },
-        scales: {
-          r: {
-            min: 0,
-            max: 4,
-          },
-        },
-      },
-    });
+      });
+    }
   }
 }

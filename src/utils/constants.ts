@@ -79,4 +79,10 @@ const TEXTS_CLOCK: any = {
   },
 };
 
-export { TEXTS_GOLDEN_CIRCLE, TEXTS_RADAR, TEXTS_CLOCK };
+const TEXTS_MODAL_DASHBOARD = {
+  title: '¡Bienvenido!',
+  text: 'Estramipyme te guiará por las tres etapas del proceso estratégico (diagnóstico, reto estratégico, cocreación de estrategia competitiva) a través de preguntas y herramientas que te permitirán reconocer de dónde viene el éxito de tu negocio, dónde estás hoy y a dónde quieres llegar.',
+  textButton: 'Realizar diagnóstico',
+};
+
+export { TEXTS_GOLDEN_CIRCLE, TEXTS_RADAR, TEXTS_CLOCK, TEXTS_MODAL_DASHBOARD };

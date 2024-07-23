@@ -375,7 +375,7 @@
     },
     {
         "id": 18,
-        "question": "¿Qué tanto freces características únicas que diferencian tus productos de los competidores?",
+        "question": "¿Qué tanto ofreces características únicas que diferencian tus productos de los competidores?",
         "options": {
             "option1": {
                 "text": "Poco",
@@ -529,7 +529,7 @@
     },
     {
         "id": 25,
-        "question": "¿Qué tanto la empresa recibe retroalimentación positiva frecuente de los clientes sobre el valor de sus productos/servicios?",
+        "question": "¿Qué tanto la empresa recibe retroalimentación positiva de los clientes sobre el valor de sus productos/servicios?",
         "options": {
             "option1": {
                 "text": "Poco",

@@ -58,26 +58,19 @@
     </nav>
   </header>
 
-  <div class="container d-flex flex-wrap row-gap-4">
+  <div class="container d-flex flex-wrap row-gap-4" *ngIf="answersForm.radar">
     <div class="row contain-graph">
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <div class="container-gold-circle">
-          <div>QUÉ</div>
-          <div>CÓMO</div>
-          <div>POR QUÉ</div>
+          <div (click)="setDataGoldenCircle(3)">QUÉ</div>
+          <div (click)="setDataGoldenCircle(2)">CÓMO</div>
+          <div (click)="setDataGoldenCircle(1)">POR QUÉ</div>
         </div>
       </div>
       <div class="col-12 col-md-6 mt-5 mt-md-0 container-text-graph">
-        <h3 class="mb-4 text-center">POR QUÉ</h3>
+        <h3 class="mb-4 text-center">{{dataGoldenCircle.title}}</h3>
         <p>
-          Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto
-          de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución
-          más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí,
-          contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de
-          autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una
-          búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se
-          encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas
-          veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).
+          {{dataGoldenCircle.description}}
         </p>
       </div>
     </div>
@@ -96,12 +89,7 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until
-                the collapse plugin adds the appropriate classes that we use to style each element.
-                These classes control the overall appearance, as well as the showing and hiding via CSS
-                transitions. You can modify any of this with custom CSS or overriding our default
-                variables. It's also worth noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit overflow.
+                {{dataRadarGraph.conocimientoCliente.text}}
               </div>
             </div>
           </div>
@@ -114,12 +102,7 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                until the collapse plugin adds the appropriate classes that we use to style each
-                element. These classes control the overall appearance, as well as the showing and hiding
-                via CSS transitions. You can modify any of this with custom CSS or overriding our
-                default variables. It's also worth noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit overflow.
+                {{dataRadarGraph.conocimientoNegocio.text}}
               </div>
             </div>
           </div>
@@ -132,12 +115,7 @@
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
-                the collapse plugin adds the appropriate classes that we use to style each element.
-                These classes control the overall appearance, as well as the showing and hiding via CSS
-                transitions. You can modify any of this with custom CSS or overriding our default
-                variables. It's also worth noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit overflow.
+                {{dataRadarGraph.coherenciaModeloNegocio.text}}
               </div>
             </div>
           </div>
@@ -150,12 +128,7 @@
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
-                the collapse plugin adds the appropriate classes that we use to style each element.
-                These classes control the overall appearance, as well as the showing and hiding via CSS
-                transitions. You can modify any of this with custom CSS or overriding our default
-                variables. It's also worth noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit overflow.
+                {{dataRadarGraph.alineacionComunicacionInterna.text}}
               </div>
             </div>
           </div>
@@ -168,12 +141,7 @@
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
-                the collapse plugin adds the appropriate classes that we use to style each element.
-                These classes control the overall appearance, as well as the showing and hiding via CSS
-                transitions. You can modify any of this with custom CSS or overriding our default
-                variables. It's also worth noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit overflow.
+                {{dataRadarGraph.saludFinanciera.text}}
               </div>
             </div>
           </div>
@@ -185,18 +153,13 @@
         <img src="./assets/images/reloj-graph.svg" alt="Reloj estrategico" class="clock">
       </div>
       <div class="col-12 col-md-6 mt-5 mt-md-0 container-text-graph">
-        <h3 class="mb-4 text-center">Híbrida</h3>
+        <h3 class="mb-4 text-center">{{dataClockGraph.title}}</h3>
         <p>
-          Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto
-          de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución
-          más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí,
-          contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de
-          autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una
-          búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se
-          encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas
-          veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).
+          {{dataClockGraph.text}}
         </p>
       </div>
     </div>
   </div>
 </div>
+
+<app-modal-dashboard></app-modal-dashboard>

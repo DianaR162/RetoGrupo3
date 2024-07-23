@@ -50,10 +50,9 @@ main .container-video {
     padding: 40px;
 }
 
-main .container-video video {
+main .container-video iframe {
     width: 100%;
     height: 180px;
-    border-radius: 10px;
 }
 
 main .container-video h5 {

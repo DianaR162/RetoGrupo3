@@ -1,0 +1,25 @@
+pe-price-number
+
+<script>
+    // Function to format a number as currency
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'COP' }).format(amount);
+    }
+
+    const priceElement = document.getElementsByClassName('pe-price-number').textContent;
+    // Display the formatted number in the paragraph element
+    document.getElementsByClassName('pe-price-number').textContent = formatCurrency(parseInt(priceElement.textContent));;
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.getElementsByClassName('pe-price-number');
+
+        elements.forEach(element => {
+            const amount = parseInt(element.textContent);
+            const formattedAmount = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
+            element.textContent = formattedAmount;
+        });
+    });
+</script>

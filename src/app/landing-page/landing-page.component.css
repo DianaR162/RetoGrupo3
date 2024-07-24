@@ -1,21 +1,21 @@
 header nav {
     height: 80px;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 0.5s ease-in;
     opacity: 0;
-    animation-fill-mode: both; 
+    animation-fill-mode: both;
 }
 
 nav .estramipyme-logo {
     width: 120px;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 0.5s ease-in;
     opacity: 0;
     animation-delay: 0.5s;
-    animation-fill-mode: both; 
+    animation-fill-mode: both;
 }
 
 main > section {
     padding: 70px 5px;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 0.5s ease-in;
     opacity: 0;
     animation-delay: 1s;
     animation-fill-mode: both;
@@ -27,17 +27,17 @@ main > section img {
     animation: fadeInUp 1s ease;
     opacity: 0;
     animation-delay: 1.5s;
-    animation-fill-mode: both; 
+    animation-fill-mode: both;
 }
 
 main > section h3 {
     font-size: 25px;
     font-weight: bold;
     width: 100%;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 0.5s ease-in;
     opacity: 0;
-    animation-delay: 2s;
-    animation-fill-mode: both; 
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 }
 
 main > section.section-blue-light h3 {
@@ -51,9 +51,9 @@ main > section .text-section {
     font-weight: 300;
     text-align: justify;
     opacity: 0;
-    animation: fadeInUp 1s ease;
+    animation: fadeInUp 0.5s ease;
     animation-delay: 2.5s;
-    animation-fill-mode: both; 
+    animation-fill-mode: both;
 }
 
 main > section.section-blue-light .text-section {
@@ -74,7 +74,7 @@ main .container-video {
     animation: fadeIn 1.5s ease-in;
     opacity: 0;
     animation-delay: 3s;
-    animation-fill-mode: both; 
+    animation-fill-mode: both;
 }
 
 main .container-video iframe {
@@ -97,10 +97,10 @@ form {
     background-color: #efefef;
     padding: 40px;
     border-radius: 20px;
-    animation: fadeInUp 1s ease;
+    animation: fadeInUp 0.5s ease;
     opacity: 0;
     animation-delay: 3.5s;
-    animation-fill-mode: both; 
+    animation-fill-mode: both;
 }
 
 form .form-control {
@@ -109,7 +109,7 @@ form .form-control {
     font-size: 18px;
     animation: fadeIn 0.5s ease;
     opacity: 0;
-    animation-fill-mode: both; 
+    animation-fill-mode: both;
 }
 
 form textarea.form-control {
@@ -138,7 +138,6 @@ footer a {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Media queries */
 @media (min-width: 576px) {
     nav .estramipyme-logo {
         width: 180px;
@@ -177,7 +176,6 @@ footer a {
         font-size: 20px;
     }
 }
-
 
 @keyframes fadeIn {
     from {

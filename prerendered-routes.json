@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/dashboard",
+    "/dashboard/diagnosis",
+    "/dashboard/general",
+    "/form",
+    "/form/welcome",
+    "/log-in",
+    "/register"
+  ]
+}

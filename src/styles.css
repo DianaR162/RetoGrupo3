@@ -25,19 +25,19 @@ body {
 
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #006b80;
-    --bs-btn-border-color: #006b80;
+    --bs-btn-bg: var(--color-blue);
+    --bs-btn-border-color: var(--color-blue);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #01859f;
-    --bs-btn-hover-border-color: #088faa;
+    --bs-btn-hover-bg: #1e3590;
+    --bs-btn-hover-border-color: #1e3590;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #088faa;
-    --bs-btn-active-border-color: #088faa;
+    --bs-btn-active-bg: #1e3590;
+    --bs-btn-active-border-color: #1e3590;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #006b80;
-    --bs-btn-disabled-border-color: #006b80;
+    --bs-btn-disabled-bg: var(--color-blue);
+    --bs-btn-disabled-border-color: var(--color-blue);
     border-radius: var(--bs-border-radius-pill);
 }
 
@@ -68,10 +68,9 @@ body {
 }
 
 .bg-primary {
-    background-color: #006b80 !important;
+    background-color: var(--color-blue) !important;
 }
 
-/* NAVBAR */
 .navbar-height {
     height: 88px;
 }

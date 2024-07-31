@@ -41,7 +41,7 @@ main > section h3 {
 }
 
 main > section.section-blue-light h3 {
-    color: var(--color-white);
+    color: var(--color-light-grey);
 }
 
 main > section .text-section {
@@ -57,11 +57,11 @@ main > section .text-section {
 }
 
 main > section.section-blue-light .text-section {
-    color: var(--color-white);
+    color: var(--color-light-grey);
 }
 
 .section-blue-light {
-    background-color: var(--color-blue-light);
+    background-color: var(--color-blue);
 }
 
 main .container-video {

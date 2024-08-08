@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,4 +10,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
-export class LandingPageComponent { }
+export class LandingPageComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    AOS.init();
+  }
+}

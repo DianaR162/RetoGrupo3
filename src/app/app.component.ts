@@ -1,4 +1,4 @@
-import { Component, AfterViewInit  } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import 'aos/dist/aos.css';
 
@@ -9,7 +9,4 @@ import 'aos/dist/aos.css';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements AfterViewInit {
-  ngAfterViewInit() {
-  }
-}
+export class AppComponent {}

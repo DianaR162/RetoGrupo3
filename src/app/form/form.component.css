@@ -1,5 +1,5 @@
 .slider {
-    accent-color: #006b80;
+    accent-color: var(--color-blue);
 }
 
 .question-text {

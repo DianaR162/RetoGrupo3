@@ -15,3 +15,4 @@ export class LandingPageComponent implements AfterViewInit {
     AOS.init();
   }
 }
+

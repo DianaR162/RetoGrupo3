@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  styleUrl: './landing-page.component.css',
 })
 export class LandingPageComponent implements AfterViewInit {
   ngAfterViewInit() {

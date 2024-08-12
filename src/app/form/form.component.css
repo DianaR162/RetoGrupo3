@@ -27,6 +27,16 @@
 #section-send-success a {
     width: auto;
 }
+.progress {
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
 
 @media (min-width: 576px) {
     .question-text,

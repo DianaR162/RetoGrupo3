@@ -6,6 +6,15 @@
   </nav>
 </section>
 <section class="container mt-5">
+  <div class="progress mb-4">
+    <div class="progress-bar bg-success" role="progressbar" [style.width.%]="progressPercent" aria-valuenow="{progressPercent}" aria-valuemin="0" aria-valuemax="100">
+      {{ progressPercent }}%
+    </div>
+  </div>
+  <div class="text-center mb-4">
+    <p>Pregunta {{ currentQuestion }} de {{ totalQuestions }}</p>
+    <p>{{ questionsLeft }} preguntas restantes ({{ questionsLeftPercent }}%)</p>
+  </div>
   <div [class]="'row justify-content-center ' + (currentQuestion <= totalQuestions ? 'd-flex' : 'd-none')">
     <div *ngFor="let question of questions"
       [class]="'flex-wrap justify-content-center ' + (question.id === currentQuestion ? 'd-flex' : 'd-none')">

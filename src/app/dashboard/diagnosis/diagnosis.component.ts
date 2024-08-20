@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import Chart from 'chart.js/auto';
 import {
   TEXTS_CLOCK,
@@ -8,11 +7,12 @@ import {
 } from '../../../utils/constants';
 import { ModalDashboardComponent } from '../../components/organisms/modal-dashboard/modal-dashboard.component';
 import { NgIf } from '@angular/common';
+import { NavDashboardComponent } from '../../components/organisms/nav-dashboard/nav-dashboard.component';
 
 @Component({
   selector: 'app-diagnosis',
   standalone: true,
-  imports: [RouterLink, ModalDashboardComponent, NgIf],
+  imports: [ModalDashboardComponent, NgIf, NavDashboardComponent],
   templateUrl: './diagnosis.component.html',
   styleUrls: ['../dashboard.component.css', './diagnosis.component.css'],
 })

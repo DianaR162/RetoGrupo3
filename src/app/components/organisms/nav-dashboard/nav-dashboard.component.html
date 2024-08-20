@@ -1,0 +1,107 @@
+<header>
+  <nav id="nav-dashboard" class="navbar bg-body-tertiary shadow">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler border-0 shadow-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target=" #offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><i class="bi bi-person-circle"></i></a>
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <img src="/assets/icons/estramipyme.svg" alt="" />
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 row-gap-3">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle hover-nav-tex"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                id="summary"
+              >
+                <i class="bi bi-speedometer2"></i> Resumen
+              </a>
+              <ul class="dropdown-menu">
+                <li data-bs-dismiss="offcanvas">
+                  <a
+                    id="general"
+                    class="dropdown-item hover-nav-tex"
+                    routerLink="/dashboard/general"
+                    >General</a
+                  >
+                </li>
+                <li data-bs-dismiss="offcanvas">
+                  <a
+                    id="diagnosis"
+                    class="dropdown-item hover-nav-tex"
+                    routerLink="/dashboard/diagnosis"
+                    >Diagnóstico</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle hover-nav-tex"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-ui-checks"></i> Cuestionarios
+              </a>
+              <ul class="dropdown-menu">
+                <li data-bs-dismiss="offcanvas">
+                  <a
+                    class="dropdown-item hover-nav-tex"
+                    routerLink="/form/welcome"
+                    >Evalúa tu empresa</a
+                  >
+                </li>
+                <li data-bs-dismiss="offcanvas">
+                  <a class="dropdown-item hover-nav-tex" href="#">Empleados</a>
+                </li>
+                <li data-bs-dismiss="offcanvas">
+                  <a class="dropdown-item hover-nav-tex" href="#">Clientes</a>
+                </li>
+              </ul>
+            </li>
+            <li data-bs-dismiss="offcanvas" class="nav-item">
+              <a class="nav-link hover-nav-tex" aria-current="page" href="#"
+                ><i class="bi bi-bullseye"></i>Estrategias</a
+              >
+            </li>
+            <span class="line"></span>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li data-bs-dismiss="offcanvas" class="nav-item">
+              <a class="nav-link hover-nav-tex" aria-current="page" href="#"
+                ><i class="bi bi-arrow-left-circle"></i>Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

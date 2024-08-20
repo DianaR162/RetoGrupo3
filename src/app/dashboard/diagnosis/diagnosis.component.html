@@ -1,66 +1,13 @@
 <div id="container-diagnosis">
-  <header>
-    <nav id="nav-dashboard" class="navbar bg-body-tertiary shadow">
-      <div class="container-fluid">
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
-          data-bs-target=" #offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#"><i class="bi bi-person-circle"></i></a>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <img src="./assets/icons/estramipyme.svg" alt="">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 row-gap-3">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle hover-nav-tex active-principal" href="#" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-speedometer2"></i> Resumen
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item hover-nav-tex " routerLink="/dashboard/general">General</a></li>
-                  <li><a class="dropdown-item hover-nav-tex active-child"
-                      routerLink="/dashboard/diagnosis">Diagnóstico</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle hover-nav-tex" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <i class="bi bi-ui-checks"></i> Cuestionarios
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item hover-nav-tex" routerLink="/form/welcome">Evalúa
-                      tu empresa</a></li>
-                  <li><a class="dropdown-item hover-nav-tex" href="#">Empleados</a></li>
-                  <li><a class="dropdown-item hover-nav-tex" href="#">Clientes</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hover-nav-tex" aria-current="page" href="#"><i
-                    class="bi bi-bullseye"></i>Estrategias</a>
-              </li>
-              <span class="line"></span>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hover-nav-tex" aria-current="page" href="#"><i
-                    class="bi bi-arrow-left-circle"></i>Cerrar sesión</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
+  <app-nav-dashboard
+    activePrincipal="summary"
+    activeChild="diagnosis"
+  ></app-nav-dashboard>
   <div class="container d-flex flex-wrap row-gap-4" *ngIf="answersForm.radar">
     <div class="row contain-graph">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+      >
         <div class="container-gold-circle">
           <div (click)="setDataGoldenCircle(3)">QUÉ</div>
           <div (click)="setDataGoldenCircle(2)">CÓMO</div>
@@ -68,80 +15,132 @@
         </div>
       </div>
       <div class="col-12 col-md-6 mt-5 mt-md-0 container-text-graph">
-        <h3 class="mb-4 text-center">{{dataGoldenCircle.title}}</h3>
+        <h3 class="mb-4 text-center">{{ dataGoldenCircle.title }}</h3>
         <p>
-          {{dataGoldenCircle.description}}
+          {{ dataGoldenCircle.description }}
         </p>
       </div>
     </div>
     <div class="row contain-graph">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center order-md-1">
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center order-md-1"
+      >
         <canvas #containerChart></canvas>
       </div>
       <div class="col-12 col-md-6 mt-5 mt-md-0 container-text-graph">
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed title-accordion-radar" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button
+                class="accordion-button collapsed title-accordion-radar"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
                 Conocimiento del Cliente
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
               <div class="accordion-body">
-                {{dataRadarGraph.conocimientoCliente.text}}
+                {{ dataRadarGraph.conocimientoCliente.text }}
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed title-accordion-radar" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button
+                class="accordion-button collapsed title-accordion-radar"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
                 Conocimiento del Negocio
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
               <div class="accordion-body">
-                {{dataRadarGraph.conocimientoNegocio.text}}
+                {{ dataRadarGraph.conocimientoNegocio.text }}
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed title-accordion-radar" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button
+                class="accordion-button collapsed title-accordion-radar"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
                 Coherencia del modelo de negocio
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
               <div class="accordion-body">
-                {{dataRadarGraph.coherenciaModeloNegocio.text}}
+                {{ dataRadarGraph.coherenciaModeloNegocio.text }}
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed title-accordion-radar" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <button
+                class="accordion-button collapsed title-accordion-radar"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
                 Alineación en la comunicación interna
               </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
               <div class="accordion-body">
-                {{dataRadarGraph.alineacionComunicacionInterna.text}}
+                {{ dataRadarGraph.alineacionComunicacionInterna.text }}
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed title-accordion-radar" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <button
+                class="accordion-button collapsed title-accordion-radar"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
                 Salud Financiera
               </button>
             </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
               <div class="accordion-body">
-                {{dataRadarGraph.saludFinanciera.text}}
+                {{ dataRadarGraph.saludFinanciera.text }}
               </div>
             </div>
           </div>
@@ -149,13 +148,19 @@
       </div>
     </div>
     <div class="row contain-graph">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-        <img src="./assets/images/reloj-graph.svg" alt="Reloj estrategico" class="clock">
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+      >
+        <img
+          src="./assets/images/reloj-graph.svg"
+          alt="Reloj estrategico"
+          class="clock"
+        />
       </div>
       <div class="col-12 col-md-6 mt-5 mt-md-0 container-text-graph">
-        <h3 class="mb-4 text-center">{{dataClockGraph.title}}</h3>
+        <h3 class="mb-4 text-center">{{ dataClockGraph.title }}</h3>
         <p>
-          {{dataClockGraph.text}}
+          {{ dataClockGraph.text }}
         </p>
       </div>
     </div>

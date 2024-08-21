@@ -1,58 +1,62 @@
 .slider {
-    accent-color: var(--color-blue);
+  accent-color: var(--color-blue);
 }
 
 .question-text {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .option-text {
-    font-size: 12px;
+  font-size: 12px;
+}
+
+.question-content {
+  min-height: 40vh;
 }
 
 #section-send-success h4 {
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 #section-send-success p {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 #section-send-success img {
-    width: 90%;
-    max-width: 300px;
+  width: 90%;
+  max-width: 300px;
 }
 
 #section-send-success a {
-    width: auto;
+  width: auto;
 }
 .progress {
-    height: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .progress-bar {
-    line-height: 30px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-  }
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  line-height: 30px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
 
 @media (min-width: 576px) {
-    .question-text,
-    #section-send-success p {
-        font-size: 24px;
-    }
+  .question-text,
+  #section-send-success p {
+    font-size: 24px;
+  }
 
-    .option-text {
-        font-size: 16px;
-    }
+  .option-text {
+    font-size: 16px;
+  }
 
-    #section-send-success h4 {
-        font-size: 40px;
-    }
+  #section-send-success h4 {
+    font-size: 40px;
+  }
 
-    #section-send-success a {
-        font-size: 25px;
-    }
+  #section-send-success a {
+    font-size: 25px;
+  }
 }

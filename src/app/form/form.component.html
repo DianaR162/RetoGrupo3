@@ -1,85 +1,151 @@
 <section class="header">
   <nav>
-    <div class="d-flex justify-content-center align-items-center bg-primary navbar-height">
+    <div
+      class="d-flex justify-content-center align-items-center bg-primary navbar-height"
+    >
       <span class="navbar-text"> Estramipyme </span>
     </div>
   </nav>
 </section>
 <section class="container mt-5">
-  <div class="progress mb-4">
-    <div class="progress-bar bg-success" role="progressbar" [style.width.%]="progressPercent" aria-valuenow="{progressPercent}" aria-valuemin="0" aria-valuemax="100">
+  <div
+    [class]="
+      'progress mb-4 ' +
+      (currentQuestion <= totalQuestions ? 'd-block' : 'd-none')
+    "
+  >
+    <div
+      class="progress-bar bg-success"
+      role="progressbar"
+      [style.width.%]="progressPercent"
+      aria-valuenow="{progressPercent}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
       {{ progressPercent }}%
     </div>
   </div>
-  <div class="text-center mb-4">
+  <div
+    [class]="
+      'text-center mb-4 ' +
+      (currentQuestion <= totalQuestions ? 'd-block' : 'd-none')
+    "
+  >
     <p>Pregunta {{ currentQuestion }} de {{ totalQuestions }}</p>
     <p>{{ questionsLeft }} preguntas restantes ({{ questionsLeftPercent }}%)</p>
   </div>
-  <div [class]="'row justify-content-center ' + (currentQuestion <= totalQuestions ? 'd-flex' : 'd-none')">
-    <div *ngFor="let question of questions"
-      [class]="'flex-wrap justify-content-center ' + (question.id === currentQuestion ? 'd-flex' : 'd-none')">
+  <div
+    [class]="
+      'row justify-content-center ' +
+      (currentQuestion <= totalQuestions ? 'd-flex' : 'd-none')
+    "
+  >
+    <div
+      *ngFor="let question of questions"
+      [class]="
+        'flex-wrap justify-content-center question-content ' +
+        (question.id === currentQuestion ? 'd-flex' : 'd-none')
+      "
+    >
       <div class="col-12 col-lg-7">
         <p class="text-center my-5 question-text">
-          {{question.id}} {{question.question}}
+          {{ question.id }} {{ question.question }}
         </p>
       </div>
       <div class="col-12 col-lg-7 text-center mt-5">
-        <span [id]="'sliderLabel-' + question.id">4</span>
+        <span [id]="'sliderLabel-' + question.id">0</span>
         <div>
-          <input [id]="'slider-' + question.id" type="range" min="1" max="4" value="4" step="1" class="w-100 slider"
-            (input)="updateSliderLabel(question.id)" />
+          <input
+            [id]="'slider-' + question.id"
+            type="range"
+            min="0"
+            max="4"
+            value="0"
+            step="1"
+            class="w-100 slider"
+            (input)="updateSliderLabel(question.id)"
+          />
         </div>
       </div>
-      <div class="col-12 col-lg-7 mt-3 mb-5 px-4 px-sm-0 d-flex flex-wrap justify-content-center text-md-center">
+      <div
+        class="col-12 col-lg-7 mt-3 mb-5 px-4 px-sm-0 d-flex flex-wrap justify-content-center text-md-center"
+      >
         <div class="col-6 col-md-2">
           <span class="badge bg-primary rounded-pill">
-            {{question.options.option1.value}}
+            {{ question.options.option1.value }}
           </span>
           <span class="option-text">
-            {{question.options.option1.text}}
+            {{ question.options.option1.text }}
           </span>
         </div>
         <div class="col-6 col-md-2">
           <span class="badge bg-primary rounded-pill">
-            {{question.options.option2.value}}
+            {{ question.options.option2.value }}
           </span>
           <span class="option-text">
-            {{question.options.option2.text}}
+            {{ question.options.option2.text }}
           </span>
         </div>
         <div class="col-6 col-md-3">
           <span class="badge bg-primary rounded-pill">
-            {{question.options.option3.value}}
+            {{ question.options.option3.value }}
           </span>
           <span class="option-text">
-            {{question.options.option3.text}}
+            {{ question.options.option3.text }}
           </span>
         </div>
         <div class="col-6 col-md-3">
           <span class="badge bg-primary rounded-pill">
-            {{question.options.option4.value}}
+            {{ question.options.option4.value }}
           </span>
           <span class="option-text">
-            {{question.options.option4.text}}
+            {{ question.options.option4.text }}
           </span>
         </div>
       </div>
     </div>
-    <div id="container-buttons" class="col-12 col-lg-7 mt-5 justify-content-between d-flex">
-      <button class="btn btn-primary option-text" (click)="showPrevQuestion()"
-        [disabled]="prevQuestion === 0">Anterior</button>
-      <button class="btn btn-primary option-text" (click)="showNextQuestion()">{{currentQuestion ===
-        totalQuestions ? 'Terminar' : 'Siguiente'}}</button>
+    <div
+      id="container-buttons"
+      class="col-12 col-lg-7 mt-5 justify-content-between d-flex"
+    >
+      <button
+        class="btn btn-primary option-text"
+        (click)="showPrevQuestion()"
+        [disabled]="prevQuestion === 0"
+      >
+        Anterior
+      </button>
+      <button
+        class="btn btn-primary option-text"
+        (click)="
+          currentQuestion === totalQuestions ? submitForm() : showNextQuestion()
+        "
+      >
+        {{ currentQuestion === totalQuestions ? "Terminar" : "Siguiente" }}
+      </button>
     </div>
   </div>
-  <div id="section-send-success"
-    [class]="'row flex-column align-items-center flex-wrap text-center ' + (currentQuestion > totalQuestions ? 'd-flex' : 'd-none')">
+  <div
+    id="section-send-success"
+    [class]="
+      'row flex-column align-items-center flex-wrap text-center ' +
+      (currentQuestion > totalQuestions ? 'd-flex' : 'd-none')
+    "
+  >
     <h4>¡Formulario enviado con éxito !</h4>
-    <p class="mt-5">Todas sus respuestas serán tratadas con discrecion y se utilizarán únicamente con fines de
-      análisis.
+    <p class="mt-5">
+      Todas sus respuestas serán tratadas con discrecion y se utilizarán
+      únicamente con fines de análisis.
     </p>
-    <img class="mt-5 mb-5" src="./assets/images/form/form-success.svg" alt="Enviado con éxito">
-    <a class="btn btn-primary option-text mt-5" routerLink="/dashboard/diagnosis">
+    <img
+      class="mt-5 mb-5"
+      src="./assets/images/form/form-success.svg"
+      alt="Enviado con éxito"
+    />
+    <a
+      class="btn btn-primary option-text mt-5"
+      routerLink="/dashboard/diagnosis"
+    >
       Salir
     </a>
   </div>

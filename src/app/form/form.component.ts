@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [NgFor, RouterLink],
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  styleUrl: './form.component.css',
 })
 export class FormComponent {
   currentQuestion: number = 1;
@@ -30,7 +30,7 @@ export class FormComponent {
       next: (response) => {
         this.questions = response;
         this.totalQuestions = response.length;
-        this.updateProgress(); 
+        this.updateProgress();
       },
       error: (error) => {
         console.error(error);
@@ -48,12 +48,11 @@ export class FormComponent {
   }
 
   showNextQuestion(): void {
-    if (this.currentQuestion < this.totalQuestions) {
+    if (this.currentQuestion <= this.totalQuestions) {
       this.currentQuestion++;
       this.nextQuestion++;
       this.prevQuestion++;
       this.updateProgress();
-    } else if (this.currentQuestion === this.totalQuestions) {
     }
   }
 
@@ -62,15 +61,19 @@ export class FormComponent {
       this.currentQuestion--;
       this.nextQuestion--;
       this.prevQuestion--;
-      this.updateProgress(); 
+      this.updateProgress();
     }
   }
 
   private updateProgress(): void {
     if (this.totalQuestions > 0) {
-      this.progressPercent = Math.round((this.currentQuestion / this.totalQuestions) * 100);
+      this.progressPercent = Math.round(
+        (this.currentQuestion / this.totalQuestions) * 100
+      );
       this.questionsLeft = this.totalQuestions - this.currentQuestion;
-      this.questionsLeftPercent = Math.round((this.questionsLeft / this.totalQuestions) * 100);
+      this.questionsLeftPercent = Math.round(
+        (this.questionsLeft / this.totalQuestions) * 100
+      );
     } else {
       this.progressPercent = 0;
       this.questionsLeft = 0;
@@ -78,7 +81,9 @@ export class FormComponent {
     }
   }
 
-  private submitForm(): void {
+  submitForm(): void {
+    this.showNextQuestion();
+
     let answers: any = {
       goldenCircle: {
         porQue: [],
@@ -121,10 +126,10 @@ export class FormComponent {
       }
     }
 
-    localStorage.setItem('answersForm', JSON.stringify(answers))
-  
-}
-ngOnInit(): void {
-  this.getQuestions();
-}
+    localStorage.setItem('answersForm', JSON.stringify(answers));
+  }
+
+  ngOnInit(): void {
+    this.getQuestions();
+  }
 }
